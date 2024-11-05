@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="day2InterviewPrep2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/config-server.zip!/" />
+      <root url="jar://$PROJECT_DIR$/service-registry.zip!/" />
+      <root url="jar://$PROJECT_DIR$/book-service.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
