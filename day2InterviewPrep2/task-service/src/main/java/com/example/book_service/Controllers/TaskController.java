@@ -34,5 +34,23 @@ public class TaskController {
         return this.taskService.getAllTasks();
     }
 
+    @PutMapping("/complete/{id}")
+    public String completeTask(@PathVariable ObjectId id){
+        return this.taskService.checkBoxTask(id);
+    }
 
+    @PutMapping("/assign/{id}")
+    public String assignTask(@PathVariable ObjectId id, @RequestBody String name){
+        return this.taskService.assignTask(id,name);
+    }
+
+    @PutMapping("/unAssign/{id}")
+    public String unAssignTask(@PathVariable ObjectId id, @RequestBody String name){
+        return this.taskService.unAssignTask(id,name);
+    }
+
+    @PutMapping("/priority/{id}")
+    public String prioritizeTask(@PathVariable ObjectId id, @RequestBody String priority){
+        return this.taskService.setPriority(id,priority);
+    }
 }

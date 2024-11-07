@@ -1,0 +1,11 @@
+
+spring:
+    application:
+        name: task-service
+    config:
+        import: "optional:configserver:http://localhost:8080"
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: day2IP2

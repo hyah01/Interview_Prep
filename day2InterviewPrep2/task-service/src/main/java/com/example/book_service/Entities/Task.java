@@ -1,5 +1,6 @@
 package com.example.book_service.Entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.bson.types.ObjectId;
@@ -16,6 +17,7 @@ public class Task {
     private String taskName;
     private String taskDescription;
     private String priority;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     private Date deadline;
     private Boolean completed;
     private List<String> assigned;

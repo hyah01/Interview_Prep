@@ -17,6 +17,8 @@ public class TaskServiceImpl implements TaskService{
     private TaskRepository taskRepository;
     @Override
     public Task addTask(Task task) {
+        task.setCompleted(false);
+        task.setAssigned(task.getAssigned() == null ? new ArrayList<String>() : task.getAssigned());
         return this.taskRepository.save(task);
     }
 
